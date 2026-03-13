@@ -68,7 +68,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [self-hosted, linux, nixos, self-hosted, macOS, ARM64, self-hosted, Windows, X64]
+        platform: [[self-hosted, linux, nixos], [self-hosted, macOS, ARM64], [self-hosted, Windows, X64]]
 
     runs-on: ${{ matrix.platform }}
     env:
