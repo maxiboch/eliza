@@ -6,7 +6,7 @@ on:
 
 jobs:
   translation:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     strategy:
       matrix:
         language:
@@ -75,7 +75,7 @@ jobs:
 
   commit:
     needs: translation
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     steps:
       - uses: actions/checkout@v4
         with:

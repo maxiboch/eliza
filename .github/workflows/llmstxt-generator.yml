@@ -21,7 +21,7 @@ on:
 
 jobs:
   generate-docs:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

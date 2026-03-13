@@ -15,7 +15,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

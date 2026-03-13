@@ -8,7 +8,7 @@ on:
 jobs:
   deploy-docs:
     name: Deploy Documentation
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     permissions:
       contents: write
     steps:

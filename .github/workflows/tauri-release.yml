@@ -40,7 +40,7 @@ env:
 jobs:
   # Common setup job to prepare repository
   setup:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -50,7 +50,7 @@ jobs:
   # macOS Desktop Build
   build-macos:
     needs: setup
-    runs-on: macos-latest
+    runs-on: [self-hosted, macOS, ARM64]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -132,7 +132,7 @@ jobs:
   # Windows Desktop Build
   build-windows:
     needs: setup
-    runs-on: windows-latest
+    runs-on: [self-hosted, Windows, X64]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -211,7 +211,7 @@ jobs:
   # Linux Desktop Build
   build-linux:
     needs: setup
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -295,7 +295,7 @@ jobs:
   # Android Build
   build-android:
     needs: setup
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -402,7 +402,7 @@ jobs:
   # iOS Build
   build-ios:
     needs: setup
-    runs-on: macos-latest
+    runs-on: [self-hosted, macOS, ARM64]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

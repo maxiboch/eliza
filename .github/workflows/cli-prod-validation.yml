@@ -14,7 +14,7 @@ env:
 
 jobs:
   prod-validation:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
 
     steps:
       - name: Checkout code

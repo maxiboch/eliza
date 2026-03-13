@@ -20,7 +20,7 @@ on:
 jobs:
   # Setup job - builds packages once to share across platforms
   setup:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, nixos]
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
